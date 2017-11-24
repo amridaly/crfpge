@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<metadata>
+	<layout title="Spider FAQ Multiple Categories">
+		<message></message>
+	</layout>
+	<fields name="request">
+
+  	<fieldset name="request" label="Component Parameters" addfieldpath="/administrator/components/com_spiderfaq/elements/" >
+  
+  <field name="standcat" type="cat" default="0" label="Use Standard Category" description="" addfieldpath="/administrator/components/com_spiderfaq/elements" />
+			
+  		
+  <field name="faq_cats" type="faqmultiple" default="" label="Select Categories" addfieldpath="/administrator/components/com_spiderfaq/elements"/>
+      
+   <field
+				name="standcatids"
+				type="standcatidmultiple"
+				addfieldpath="/administrator/components/com_spiderfaq/elements"
+				extension="com_content"
+				label="Select Categories"
+				
+				description="A content category"/>	
+	
+   <field name="theme" type="theme" default="" label="Select Theme" description="" addfieldpath="/administrator/components/com_spiderfaq/elements" />
+ 
+   <field name="searchform" type="radio" label="Show Search Form" default="1" description="">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+   
+</field>
+ 
+ <field name="expand" type="radio" label="Expand All Answers After The Page Is Loaded" default="0" description="">
+    <option value="0">No</option>
+    <option value="1">Yes</option>  
+</field>
+
+	</fieldset>
+	</fields>
+	
+	</metadata>

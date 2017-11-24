@@ -1,0 +1,22 @@
+#g-navigation {
+    color: $navigation-text-color;
+    background: $navigation-background;
+    .g-offcanvas-toggle {
+        top: 1.3rem;
+    }
+    .g-grid {
+        @include align-items(center);
+    }
+    .g-content{
+      padding: 0 $content-padding;
+      margin: $content-margin;
+    }
+
+}
+
+@media print {
+    #g-navigation {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

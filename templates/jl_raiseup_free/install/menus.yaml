@@ -1,0 +1,9 @@
+raiseup-theme:
+  title: 'Raiseup Theme'
+  description: 'Sample menu for Raiseup theme.'
+
+  items:
+    raiseup:
+      title: 'Home'
+      outline: home
+      home: 1

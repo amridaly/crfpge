@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="title" type="text"
+            label="JGLOBAL_TITLE"
+            class="inputbox" size="30" required="true"
+        />
+        <field name="description" type="editor"
+            label="COM_PROJECTFORK_FIELD_DESCRIPTION_LABEL" description="COM_PROJECTFORK_FIELD_DESCRIPTION_DESC"
+            buttons="true" class="inputbox" filter="JComponentHelper::filterText"
+        />
+        <field name="state" type="list"
+            label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+            class="inputbox" filter="intval" size="1" default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="catid" type="category"
+            label="JCATEGORY" description="COM_PROJECTFORK_FIELD_CATEGORY_DESC"
+            extension="com_pfprojects" class="inputbox" show_root="true"
+        >
+        </field>
+        <field name="created_by" type="user"
+            label="COM_PROJECTFORK_FIELD_CREATED_BY_LABEL" description="COM_PROJECTFORK_FIELD_CREATED_BY_DESC"
+        />
+        <field name="start_date" type="calendar"
+            label="COM_PROJECTFORK_FIELD_START_DATE_LABEL" description="COM_PROJECTFORK_FIELD_START_DATE_OPTIONAL_DESC"
+            size="22" format="%Y-%m-%d %H:%M:%S" filter="user_utc" class="inputbox"
+        />
+        <field name="end_date" type="calendar"
+            label="COM_PROJECTFORK_FIELD_DEADLINE_LABEL" description="COM_PROJECTFORK_FIELD_DEADLINE_OPTIONAL_LABEL"
+            size="22" format="%Y-%m-%d %H:%M:%S" filter="user_utc" class="inputbox"
+        />
+        <field name="modified" type="calendar"
+            label="JGLOBAL_FIELD_MODIFIED_LABEL"
+            size="22" readonly="true" format="%Y-%m-%d %H:%M:%S" filter="user_utc" class="readonly"
+        />
+        <field name="modified_by" type="user"
+            label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+            class="readonly" readonly="true" filter="unset"
+        />
+        <field name="attachment" type="repoattachment"
+            label="COM_PROJECTFORK_FIELD_ATTACHMENT_LABEL" description="COM_PROJECTFORK_FIELD_ATTACHMENT_DESC"
+        />
+        <field name="rules" type="groupaccess"
+            component="com_pfprojects" section="project" inheritonly="false" filter="PFFormHelper::filterRules" validate="groupaccess"
+            version="4.2"
+        />
+        <field name="component_rules" type="hidden" filter="PFFormHelper::filterComponentRules"/>
+        <field name="labels" type="labelmanager"
+            label="COM_PROJECTFORK_FIELD_LABELS" description="COM_PROJECTFORK_FIELD_LABELS_MANAGER_DESC"
+        />
+        <field name="id" type="hidden" readonly="true"/>
+        <field name="asset_id" type="hidden" filter="unset"/>
+        <field name="access" type="hidden" readonly="true"/>
+        <field name="elements" type="hidden"/>
+        <field name="alias" type="hidden" readonly="true"/>
+        <field name="created" type="hidden" readonly="true"/>
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+        <field name="add_groupuser" type="hidden" readonly="true" />
+        <field name="rm_groupuser" type="hidden" readonly="true" />
+    </fieldset>
+
+    <fields name="attribs">
+        <fieldset name="basic" label="COM_PROJECTFORK_DETAILS_FIELDSET">
+            <field name="website" type="text"
+                label="COM_PROJECTFORK_FIELD_WEBSITE_LABEL" description="COM_PROJECTFORK_FIELD_PROJECT_WEBSITE_DESC"
+                class="inputbox" size="30" filter="url"
+            />
+            <field name="email" type="text"
+                label="COM_PROJECTFORK_FIELD_EMAIL_LABEL" description="COM_PROJECTFORK_FIELD_PROJECT_EMAIL_DESC"
+                class="inputbox" size="30" filter="email"
+            />
+            <field name="phone" type="text"
+                label="COM_PROJECTFORK_FIELD_PHONE_LABEL" description="COM_PROJECTFORK_FIELD_PROJECT_PHONE_DESC"
+                class="inputbox" size="30"
+            />
+            <field name="logo" type="projectlogo"
+                label="COM_PROJECTFORK_FIELD_PROJECT_IMG_LABEL" description="COM_PROJECTFORK_FIELD_PROJECT_IMG_DESC"
+                class="inputbox"
+            />
+            <field name="repo_dir" type="hidden" filter="int"/>
+
+            <field type="spacer" hr="true"/>
+
+			<field name="project_color" type="color"
+				default=""
+				description="COM_PROJECTFORK_FIELD_PROJECT_OVERVIEW_COLOR_DESC"
+				label="COM_PROJECTFORK_FIELD_PROJECT_OVERVIEW_COLOR_LABEL"
+			/>
+			<field name="milestone_color" type="color"
+				default=""
+				description="COM_PROJECTFORK_FIELD_PROJECT_MILESTONE_COLOR_DESC"
+				label="COM_PROJECTFORK_FIELD_PROJECT_MILESTONE_COLOR_LABEL"
+			/>
+			<field name="tasklist_color" type="color"
+				default=""
+				description="COM_PROJECTFORK_FIELD_PROJECT_TLIST_COLOR_DESC"
+				label="COM_PROJECTFORK_FIELD_PROJECT_TLIST_COLOR_LABEL"
+			/>
+			<field name="task_color" type="color"
+				default=""
+				description="COM_PROJECTFORK_FIELD_PROJECT_TASK_COLOR_DESC"
+				label="COM_PROJECTFORK_FIELD_PROJECT_TASK_COLOR_LABEL"
+			/>
+
+            <field type="spacer" hr="true"/>
+
+			<field type="text" name="currency_code" label="COM_PROJECTFORK_CONFIG_CURRENCY_CODE_LABEL" description="COM_PROJECTFORK_CONFIG_CURRENCY_CODE_DESC" default="" maxlength="3" size="10"/>
+			<field type="text" name="currency_sign" label="COM_PROJECTFORK_CONFIG_CURRENCY_SIGN_LABEL" description="COM_PROJECTFORK_CONFIG_CURRENCY_SIGN_DESC" default="" maxlength="2" size="10"/>
+			<field name="currency_position" type="list" label="COM_PROJECTFORK_CONFIG_CURRENCY_POS_LABEL" description="COM_PROJECTFORK_CONFIG_CURRENCY_POS_DESC">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">COM_PROJECTFORK_CONFIG_CURRENCY_POS_BEFORE_OPTION</option>
+				<option value="1">COM_PROJECTFORK_CONFIG_CURRENCY_POS_AFTER_OPTION</option>
+			</field>
+			<field type="text" name="decimal_delimiter" label="COM_PROJECTFORK_CONFIG_DECIMAL_DELIMITER_LABEL" description="COM_PROJECTFORK_CONFIG_DECIMAL_DELIMITER_DESC" default="" maxlength="1" size="10"/>
+			<field type="text" name="thousands_delimiter" label="COM_PROJECTFORK_CONFIG_THOUSANDS_DELIMITER_LABEL" description="COM_PROJECTFORK_CONFIG_THOUSANDS_DELIMITER_DESC" default="" maxlength="1" size="10"/>
+
+        </fieldset>
+    </fields>
+</form>

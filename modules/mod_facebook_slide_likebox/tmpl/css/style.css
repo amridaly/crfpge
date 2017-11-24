@@ -1,0 +1,90 @@
+/**
+ * JS Social Tabs Slider
+ * @license    GNU/GPL http://www.gnu.org/copyleft/gpl.html
+ * @link       https://jsns.eu
+ */
+
+.social_slider {
+    box-sizing: content-box !important;
+}
+.social_slider i {
+    visibility: hidden;
+}
+.social_slider a:hover {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.social_slider section {
+    display: none;
+    height: 100%;
+}
+
+.social_slider input[type="radio"] {
+    display: none !important;
+}
+
+.social_slider #tab1:checked~label~#content1 {
+    display: block;
+}
+.social_slider #tab2:checked~label~#content2 {
+    display: block;
+}
+/*----- Content of Tabs -----*/
+
+.social_slider {
+    background: transparent;
+    float: left;
+    width: 370px;
+}
+
+.social_slider .facebook_box {
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 99998;
+    width: 370px;
+}
+
+.social_slider a.active {
+    z-index: 99999;
+    position: relative;
+}
+
+.social_slider .twitter_box {
+    border-radius: 8px;
+    position: absolute;
+    z-index: 99998;
+    background: #fff;
+    width: 370px;
+}
+.social_slider .twitter_box #twitter-widget-0 {
+  min-height: 470px !important;
+}
+/*@keyframes fadeInScale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.social_slider .facebook_box, .social_slider .twitter_box {
+    -webkit-animation: fadeInScale 0.1s ease-in-out;
+    -moz-animation: fadeInScale 0.1s ease-in-out;
+    animation: fadeInScale 0.1s ease-in-out;
+}*/
+.social_slider .copyrightlink {
+    display: block;
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    font-size: 10px;
+    margin: 500px 15px;
+    text-decoration: none;
+    text-shadow: none !important;
+    text-align: left;
+}

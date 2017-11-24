@@ -1,0 +1,102 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+
+layout:
+  /header/:
+    -
+      - 'custom-5173 50'
+      - 'social-7544 50'
+  /navigation/:
+    -
+      - 'logo-7657 25'
+      - 'menu-5263 75'
+  /container-main/:
+    -
+      -
+        'mainbar 75':
+          -
+            - system-messages-4126
+          -
+            - system-content-1246
+      -
+        'aside 25': {  }
+  /abovefooter/: {  }
+  /footer/:
+    -
+      - branding-4929
+  offcanvas:
+    -
+      - mobile-menu-7330
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+      class: 'section-horizontal-paddings section-vertical-paddings'
+      extra: {  }
+  abovefooter:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  footer:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+content:
+  custom-5173:
+    title: 'Header Link'
+    attributes:
+      html: "<div class=\"header-left\">\n\t<ul>\n\t\t<li><i class=\"fa fa-comment-o\"></i> 24x7 live Support</li>\n\t\t<li><i class=\"fa fa-phone\"></i>(+88) 0123 456 789</li>\n\t\t<li><i class=\"fa fa-comment\"></i>Live Chat</li>\n\t</ul>\n</div>\n"
+    block:
+      class: hidden-phone
+  social-7544:
+    attributes:
+      items:
+        -
+          icon: 'fa fa-facebook fa-fw'
+          text: ''
+          link: 'https://www.facebook.com/JoomLead'
+          name: Facebook
+        -
+          icon: 'fa fa-youtube fa-fw'
+          text: ''
+          link: '#'
+          name: Youtube
+        -
+          icon: 'fa fa-linkedin fa-fw'
+          text: ''
+          link: '#'
+          name: Linkedin
+        -
+          icon: 'fa fa-twitter fa-fw'
+          text: ''
+          link: 'http://www.twitter.com/JoomLead'
+          name: Twitter
+  logo-7657:
+    attributes:
+      image: 'gantry-media://Logo/logo.png'
+  menu-5263:
+    attributes:
+      mobileTarget: '1'
+    block:
+      variations: align-right
+  position-position-1765:
+    title: 'Module Position'
+    attributes:
+      key: slideshow
+  mobile-menu-7330:
+    title: 'Mobile Menu'

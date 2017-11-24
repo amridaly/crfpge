@@ -1,0 +1,116 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+  name: contact
+layout:
+  /header/:
+    -
+      - custom-5173
+  /navigation/:
+    -
+      - 'logo-7657 29'
+      - 'menu-5263 71'
+  /slideshow/:
+    -
+      - position-position-1765
+  /container-main/:
+    -
+      -
+        'sidebar 14': {  }
+      -
+        'mainbar 72':
+          -
+            - system-messages-4126
+          -
+            - system-content-1246
+      -
+        'aside 14': {  }
+  /abovefooter/:
+    -
+      - 'custom-7118 31'
+      - 'custom-3704 22'
+      - 'custom-3615 22'
+      - 'position-position-4980 25'
+    -
+      - social-5078
+  /footer/:
+    -
+      - 'branding-4929 50'
+      - 'custom-8697 50'
+  offcanvas:
+    -
+      - mobile-menu-7330
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+      class: section-horizontal-paddings
+  sidebar:
+    type: section
+  mainbar:
+    type: section
+  container-main:
+    attributes:
+      boxed: ''
+      class: no-content-md
+      extra: {  }
+  abovefooter:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  footer:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+content:
+  custom-5173:
+    title: 'Header Contact'
+    attributes:
+      html: "<div class=\"header-contact\">\n  <a href=\"\"><i class=\"fa fa-phone\"></i> +123-456-789</a>\n  <span class=\"seprator\">|</span>\n  <a href=\"\"><i class=\"fa fa-envelope\"></i> demo@joomlead.com</a>\n</div>\n"
+    block:
+      class: hidden-phone
+  logo-7657:
+    attributes:
+      image: 'gantry-media://Logo/logo.png'
+  menu-5263:
+    attributes:
+      mobileTarget: '1'
+    block:
+      variations: align-right
+  position-position-1765:
+    title: 'Module Position'
+    attributes:
+      key: slideshow
+  custom-7118:
+    title: 'About Us'
+    attributes:
+      html: "<div class=\"abovefooter-ct\">\n  <img src=\"gantry-media://logo/logo.png\" alt=\"\" />\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>\n  <a href=\"#\" class=\"link-readmore\">Read More About Us <i class=\"fa  fa-long-arrow-right\"></i></a>\n</div>\n"
+  custom-3704:
+    title: Navigation
+    attributes:
+      html: "<div class=\"abovefooter-ct\">\n<h3 class=\"abovefooter-title\">Navigation</h3>\n<ul>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> home</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> About</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> projects</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> industry</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> gallery</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> blog</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> contact</a></li>\n</ul>\n</div>\n"
+  custom-3615:
+    title: Industry
+    attributes:
+      html: "<div class=\"abovefooter-ct\">\n<h3 class=\"abovefooter-title\">Industry</h3>\n<ul>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> education</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> business</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> realestate</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> technology</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> banking</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> telicommunication</a></li>\n<li><a href=\"#\"><i class=\"fa  fa-angle-right\"></i> much more</a></li>\n</ul>\n</div>"
+  position-position-4980:
+    title: Subscribe
+    attributes:
+      key: subscribe
+  custom-8697:
+    title: 'Footer Menu'
+    attributes:
+      html: "<div class=\"footer-menu\">\n<a href=\"#\">FAQ</a> <span class=\"seprator\">|</span> <a href=\"#\">Terms &amp; Condition</a> <span class=\"seprator\">|</span> <a href=\"#\">Privacy Policy</a>\n</div>"
+  mobile-menu-7330:
+    title: 'Mobile Menu'

@@ -1,0 +1,44 @@
+enabled: '1'
+slide: none
+style: '0'
+columns: '4'
+autoplay: '1'
+pause: '1'
+interval: '7000'
+slidenav: '1'
+dotnav: '0'
+gutter: uk-grid-medium
+slider:
+  center: '0'
+  infinite: '1'
+slideset:
+  animation: fade
+  duration: '200'
+article:
+  display:
+    image:
+      enabled: intro
+    text:
+      type: intro
+      limit: ''
+      formatting: text
+    title:
+      enabled: show
+      limit: ''
+    date:
+      enabled: published
+      format: 'l, F d, Y'
+    read_more:
+      enabled: show
+      label: ''
+      css: ''
+    author:
+      enabled: show
+    category:
+      enabled: link
+    hits:
+      enabled: show
+template:
+  enabled: '0'
+  content: "<div class=\"jl-content-item\">\n\t<div class=\"jl-content-item-container uk-grid uk-grid-margin\">\n\t\n\t\t<div class=\"jl-content-item-image uk-width-1-1\">\n             <a href=\"%articleLink%\">\n                 %articleImage%\n             </a>\n         </div>\n\t\t <div class=\"jl-content-item-title uk-width-1-1\">\n              <h3 class=\"jl-content-item-title\">\n\t\t\t\t<a href=\"%articleRoute%\">\n                  %articleTitle%\n\t\t\t\t</a>\n              </h3>\n         </div>\n\t\t \n\t\t <div class=\"jl-content-item-details\">\n\t\t\t<span class=\"jl-content-item-date\">\n                <i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>\n                %articleDate%\n            </span>\n\t\t\t<span class=\"jl-content-item-author\">\n                <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\n                %articleAuthor%\n            </span>\n\t\t\t<span class=\"jl-content-item-category\">\n\t\t\t\t<a href=\"%articleCategoryLink%\">\n                   <i class=\"fa fa-folder-open\" aria-hidden=\"true\"></i>\n\t\t\t\t   %articleCategoryTitle%\n                </a>\n\t\t\t</span>\n\t\t\t<span class=\"jl-content-item-hits\">\n\t\t\t\t<i class=\"fa fa-eye\" aria-hidden=\"true\"></i>\n\t\t\t\t%articleHits%\n\t\t\t</span>\n\t\t </div>\n\t\t <div class=\"jl-content-item-text uk-width-1-1\">\n            %articleText%\n         </div>\n\t\t <div class=\"jl-content-item-read-more\">\n            <a href=\"{{ article.route }}\">\n              %articleReadmore%\n            </a>\n         </div>\n\t</div>\n</div>"
+class: ''

@@ -1,0 +1,12 @@
+#g-slideshow {
+    color: $slideshow-text-color;
+    background: $slideshow-background;
+}
+
+
+@media print {
+    #g-slideshow {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

@@ -1,0 +1,17 @@
+#g-abovefooter {
+    color: $abovefooter-text-color;
+    background: $abovefooter-background;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+.g-blog #g-abovefooter, .g-default #g-abovefooter, .g-contact #g-abovefooter{
+  padding-top: 2rem;
+}
+
+
+@media print {
+    #g-abovefooter {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

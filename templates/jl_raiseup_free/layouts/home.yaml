@@ -1,0 +1,143 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home.png'
+  name: home
+layout:
+  /header/:
+    -
+      - 'custom-5173 60'
+      - 'social-1900 20'
+      - 'custom-2854 20'
+  /navigation/:
+    -
+      - 'logo-7657 25'
+      - 'menu-5263 67'
+      - 'search-7047 8'
+  /slideshow/:
+    -
+      - position-position-1765
+  /container-main/:
+    -
+      -
+        'sidebar 14': {  }
+      -
+        'mainbar 72':
+          -
+            - system-messages-4126
+          -
+            - system-content-1246
+      -
+        'aside 14': {  }
+  /abovefooter/:
+    -
+      - 'custom-7118 33'
+      - 'custom-3704 33'
+      - 'position-position-4980 34'
+  /footer/:
+    -
+      - 'branding-4929 50'
+      - 'custom-8697 50'
+  offcanvas:
+    -
+      - mobile-menu-7330
+structure:
+  header:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  slideshow:
+    type: section
+    attributes:
+      boxed: '2'
+      class: section-horizontal-paddings
+  sidebar:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  mainbar:
+    type: section
+    attributes:
+      class: ''
+  aside:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+      class: no-content-md
+      extra: {  }
+  abovefooter:
+    type: section
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  footer:
+    attributes:
+      boxed: ''
+      class: section-horizontal-paddings
+  offcanvas:
+    attributes:
+      position: g-offcanvas-left
+      class: ''
+      extra: {  }
+      swipe: '1'
+      css3animation: '1'
+content:
+  custom-5173:
+    title: 'Header Contact'
+    attributes:
+      html: "<div class=\"top-left\">\n<ul class=\"top-links clearfix\">\n<li><span class=\"icon theme_color flaticon-maps-and-flags\"></span>Raise Up, NY 10012, USA</li>\n<li><span class=\"icon theme_color flaticon-telephone\"></span>Phone +44 123 456</li>\n<li><span class=\"icon theme_color flaticon-e-mail-envelope\"></span>support@joomlead.com</li>\n</ul>\n</div>\n"
+  custom-2854:
+    title: 'Custom HTML'
+    attributes:
+      html: "<ul class=\"dropdown-option clearfix\">\n<li class=\"language dropdown\"><a class=\"btn btn-default dropdown-toggle\" id=\"dropdownMenu1\" data-toggle=\"dropdown\" aria-haspopup=\"true\"  href=\"#\"><span class=\"flaticon-world-grid\"></span>&ensp;Newyork Office &nbsp;<span class=\"icon fa fa-angle-down\"></span></a>\n<ul class=\"dropdown-menu style-one\" aria-labelledby=\"dropdownMenu1\">\n<li><a href=\"#\">California</a></li>\n<li><a href=\"#\">Chicago</a></li>\n<li><a href=\"#\">Canada</a></li>\n<li><a href=\"#\">Germany</a></li>\n</ul>\n</li>\n</ul>"
+  logo-7657:
+    attributes:
+      image: 'gantry-media://Logo/logo.png'
+  menu-5263:
+    attributes:
+      mobileTarget: '1'
+    block:
+      variations: align-right
+  search-7047:
+    attributes:
+      icon: 'fa fa-search'
+      style: '2'
+      itemid: '107'
+    block:
+      class: 'visible-desktop nav-search'
+  position-position-1765:
+    title: 'Module Position'
+    attributes:
+      key: slideshow
+  custom-7118:
+    title: 'About Us'
+    attributes:
+      html: "<div class=\"abovefooter-ct\">\n  <img src=\"gantry-media://logo/logo-white.png\" alt=\"\" />\n  <div class=\"text\">\n      <p>Over 20 years of experience we’ll ensure you always get the best guidance. We serve a clients at every level of their organization we can be most whether as a trusted advisor to top trusted our management coach for fronts line employees. </p>\n      <p>We strive to build a relationship of trust with every client, for the long-term. 70% of our work clients that we have served for over 10 years.</p>\n  </div>\n  <ul class=\"social-icon-one\">\n      <li><a href=\"#\"><span class=\"fa fa-facebook-f\"></span></a></li>\n      <li><a href=\"#\"><span class=\"fa fa-twitter\"></span></a></li>\n      <li><a href=\"#\"><span class=\"fa fa-skype\"></span></a></li>\n      <li><a href=\"#\"><span class=\"fa fa-linkedin\"></span></a></li>\n  </ul>\n</div>"
+  custom-3704:
+    title: Navigation
+    attributes:
+      html: "                            <div class=\"abovefooter-link\">\n                            <h3 class=\"abovefooter-title\">Useful Links</h3>\n                            <div class=\"uk-grid\">\n                              <div class=\"uk-width-2-6\">\n                                <ul class=\"footer-links\">\n                                \t<li><a href=\"#\">About us</a></li>\n                                    <li><a href=\"#\">Our Team</a></li>\n                                    <li><a href=\"#\">Testimonals</a></li>\n                                    <li><a href=\"#\">FAQ’S</a></li>\n                                    <li><a href=\"#\">Latest News</a></li>\n                                    <li><a href=\"#\">Our Cases</a></li>\n                                    <li><a href=\"#\">Shop</a></li>\n                                    <li><a href=\"#\">Contact us</a></li>\n                                </ul>\n                              </div>\n                              <div class=\"uk-width-4-6\">\n                                <ul class=\"footer-links\">\n                                        \t<li><a href=\"#\">Business Transformation</a></li>\n                                            <li><a href=\"#\">Turnaround &amp; Restructuring</a></li>\n                                            <li><a href=\"#\">Bonds and Commodities</a></li>\n                                            <li><a href=\"#\">Valuation &amp; Financial Advisory </a></li>\n                                            <li><a href=\"#\">Audit and Assurance</a></li>\n                                            <li><a href=\"#\">Trades and  Stocks</a></li>\n                                        </ul>\n                              </div>\n                            </div>\n                            </div>"
+  position-position-4980:
+    title: 'Request Quote'
+    attributes:
+      key: request-quote
+  custom-8697:
+    title: 'Footer Menu'
+    attributes:
+      html: "<div class=\"footer-menu\">\n<a href=\"#\">Privacy</a> <a href=\"#\">Legal</a> <a href=\"#\">Sitemap</a>\n</div>\n"
+  mobile-menu-7330:
+    title: 'Mobile Menu'

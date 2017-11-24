@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/2.5/plugin-install.dtd">
+<extension type="plugin" version="2.5" method="upgrade" group="system">
+	<name>jNews-Virtuemart Newsletter Subscription</name>
+	<author>Joobi</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) 2016 Joobi All rights reserved</copyright>
+	<license>GNU GPLv3</license>
+	<authorEmail>support@joobi.co</authorEmail>
+	<authorUrl>https://joobi.co</authorUrl>
+	<version>2.6</version>
+	<description>This plugins handles the Mailing List subscription on Virtuemart Registration Page</description>
+	<files>
+		<filename plugin="vmjnewssubs">vmjnewssubs.php</filename>
+	</files>
+
+	<params addpath="/administrator/components/com_jnews/params/plugin">
+		<param name="reqfield" type="vmfields" label="Required Field" default="user_email" description="This field should not be empty to susbcribe the user. You can use this parameter to add field (simple checkbox or radio button) on Virtuemart Registration Page "/>
+		<param name="lists" type="text" default="0" label="jNews List IDs" description="You can specify the list IDs that your virtuemart users will subscribe to. If left blank, it will take all jNews lists"/>
+	</params>
+
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_jnews/params/plugin">
+			<fieldset name="basic">
+				<field name="reqfield" type="vmfields" label="Required Field" default="user_email" description="This field should not be empty to susbcribe the user. You can use this parameter to add field (simple checkbox or radio button) on Virtuemart Registration Page "/>
+				<field name="lists" type="text" default="0" label="jNews List IDs" description="You can specify the list IDs that your virtuemart users will subscribe to. If left blank, it will take all jNews lists"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

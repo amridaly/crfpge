@@ -1,0 +1,12 @@
+#g-footer {
+    color: $footer-text-color;
+    background: $footer-background;
+
+}
+
+@media print {
+    #g-footer  {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

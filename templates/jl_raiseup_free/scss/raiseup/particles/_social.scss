@@ -1,0 +1,20 @@
+.g-social {
+        line-height: normal;
+    a {
+      span:first-child{
+        color: #d5d5d5;
+        font-size: 0.875rem;
+        height: 30px;
+        margin: 0 5px;
+        line-height: 32px;
+        width: 15px;
+        @media only screen and (min-width : 1024px) and (max-width : 1366px) {
+          width: 10px
+        }
+        &:hover{
+          color: #d5d5d5;
+        }
+      }
+    }
+    text-align: center;
+}

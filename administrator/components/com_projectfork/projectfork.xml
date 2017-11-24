@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_projectfork</name>
+    <author>Tobias Kuhn</author>
+    <creationDate>August 2016</creationDate>
+    <copyright>(C) 2006 - 2016 Tobias Kuhn. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@projectfork.net</authorEmail>
+    <authorUrl>www.projectfork.net</authorUrl>
+    <version>4.4.0</version>
+    <description>COM_PROJECTFORK_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+    <install folder="admin">
+        <sql>
+            <file driver="mysql" charset="utf8">_install/mysql/structure.sql</file>
+            <file driver="mysql" charset="utf8">_install/mysql/data.sql</file>
+        </sql>
+    </install>
+    <update>
+		<schemas>
+			<schemapath type="mysql">_update/mysql</schemapath>
+		</schemas>
+	</update>
+    <uninstall folder="admin">
+        <sql>
+            <file driver="mysql" charset="utf8">_uninstall/mysql/data.sql</file>
+            <file driver="mysql" charset="utf8">_uninstall/mysql/structure.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <folder>controllers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <filename>projectfork.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/en-GB.com_projectfork.ini</language>
+    </languages>
+    <administration>
+        <files folder="admin">
+            <folder>_install</folder>
+            <folder>_uninstall</folder>
+            <folder>_update</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <filename>config.xml</filename>
+            <filename>projectfork.php</filename>
+            <filename>controller.php</filename>
+        </files>
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_projectfork.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_projectfork.sys.ini</language>
+        </languages>
+        <menu>com_projectfork</menu>
+    </administration>
+    <media destination="com_projectfork" folder="media">
+        <folder>bootstrap</folder>
+        <folder>chosen</folder>
+        <folder>flot</folder>
+        <folder>jquery</folder>
+        <folder>projectfork</folder>
+        <folder>repo</folder>
+        <folder>select2</folder>
+    </media>
+</extension>

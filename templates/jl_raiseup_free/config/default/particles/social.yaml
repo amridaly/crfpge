@@ -1,0 +1,32 @@
+enabled: '1'
+css:
+  class: ''
+title: ''
+target: _blank
+display: both
+items:
+  -
+    icon: 'fa fa-facebook-f fa-fw'
+    text: ''
+    link: 'https://www.facebook.com/JoomLead'
+    name: Facebook
+  -
+    icon: 'fa fa-twitter fa-fw'
+    text: ''
+    link: 'http://www.twitter.com/JoomLead'
+    name: Twitter
+  -
+    icon: 'fa fa-google-plus fa-fw'
+    text: ''
+    link: '#'
+    name: Google
+  -
+    icon: 'fa fa-pinterest-p fa-fw'
+    text: ''
+    link: '#'
+    name: Pinterest
+  -
+    icon: 'fa fa-youtube fa-fw'
+    text: ''
+    link: 'https://www.youtube.com/channel/UCwLjEv_hXrOGmdK4kKQEiIg'
+    name: Youtube

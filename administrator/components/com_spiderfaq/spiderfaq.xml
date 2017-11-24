@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+<extension type="component" version="3.0" method="upgrade">
+        <name>COM_SPIDERFAQ</name> 
+        <author>Web-Dorado</author> 
+		<creationDate>September 2012</creationDate>
+		<copyright>Copyright (C) 2012 Web-Dorado.com. All rights reserved.</copyright> 
+		<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+        <authorEmail>info@web-dorado.com</authorEmail> 
+        <authorUrl>http://www.Web-Dorado.com</authorUrl>
+        <version>1.3.1</version>	
+		 <description>
+		Spider FAQ is a highly customizable Joomla! extension for creating FAQs easily and fast.
+		</description>	
+	<install>
+    		<sql>
+     			 <file charset="utf8" driver="mysql">install.mysql.sql</file>
+    		</sql>
+ 	 </install>
+ 		 <uninstall>
+    			<sql>
+     			 <file charset="utf8" driver="mysql">uninstall.mysql.sql</file>
+    			</sql>
+  		</uninstall>
+
+
+	<files folder="site">
+	
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>css</folder>
+		<filename>spiderfaq.php</filename>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages>
+        <language tag="en-GB">en-GB.com_spiderfaq.ini</language>
+    </languages> 
+	
+	
+	<administration>
+		<menu link="option=com_spiderfaq">COM_SPIDERFAQ_MENU</menu>
+		
+		<submenu>
+                        <menu>COM_QUESTIONS_MENU</menu>
+                        <menu link="option=com_spiderfaq&amp;c=categories">COM_CATEGORIES_MENU</menu>
+						<menu link="option=com_spiderfaq&amp;c=themes">COM_THEMES_MENU</menu>
+						<menu link="option=com_spiderfaq&amp;c=plggen">COM_PLUGIN_CODE_GENERATOR_MENU</menu>
+         </submenu>
+		 
+	        <files folder="admin">
+		        <folder>tables</folder>
+				<folder>images</folder>
+				<folder>elements</folder>
+				<folder>controllers</folder>
+				<folder>views</folder>
+				<folder>language</folder>
+				<folder>upload</folder>
+			
+			
+			<filename>spiderfaq.php</filename>
+			<filename>install.mysql.sql</filename>
+	    	<filename>uninstall.mysql.sql</filename>
+			<filename>index.html</filename>
+			</files>
+			<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_spiderfaq.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_spiderfaq.sys.ini</language>
+		
+		</languages>
+			
+ 	</administration>
+</extension>

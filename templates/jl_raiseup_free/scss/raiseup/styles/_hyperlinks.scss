@@ -1,0 +1,7 @@
+a {
+    color: #838b8c;
+    @include transition(all 0.5s);
+    &:hover {
+        color: inherit;
+    }
+}
